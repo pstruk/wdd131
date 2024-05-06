@@ -1,7 +1,7 @@
 // JavaScript file for Mission 2 assignment
 
 const themeSelector = document.querySelector('select'); 
-themeSelector.addEventListener('click', changeTheme);
+themeSelector.addEventListener('change', changeTheme);
 
 function changeTheme() {
     if (themeSelector.value === 'dark') { 
