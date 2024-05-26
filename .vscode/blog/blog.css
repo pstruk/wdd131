@@ -1,0 +1,146 @@
+/* stylesheet associated with the Build a Blog assignment.
+
+color and font info:
+gold color: #EFC69B
+Red color: #AF1B3F
+Dark color: #473144*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #473144;
+}
+
+.skiptocontent a {
+    position: absolute;
+    top: -40px;
+    padding: .5%;
+    background-color: #AF1B3F ;
+    outline: 2px solid black;
+    color: white;
+}
+
+.skiptocontent a:focus {
+    position: static;
+}
+
+h1 {
+    text-align: center;
+    font-family: Lora, Impact, serif;
+    font-size: 2em;
+    padding: 2%;
+}
+
+h2 {
+    color: #AF1B3F;
+    font-size: 1.5em;
+}
+
+section > p > a {
+    color: #AF1B3F;
+}
+
+nav > ul {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    justify-items: end;
+    justify-content: end;
+    /* margin-right: 7%; */
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+.navList {
+    border-top: 2px solid #EFC69B;
+    border-bottom: 2px solid #EFC69B;
+    padding: .5%;
+}
+
+.navList a {
+    color: #AF1B3F;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.navList a:focus {
+    outline: 2px solid blue;
+} 
+
+.navList a:hover {
+    color: blue;
+}
+
+/* .navList a:visited {
+    color: orange;
+} */
+
+li {
+    list-style-type: none;   /*removes bullets, numbers*/
+}
+
+img {
+    max-width: 100%;
+}
+
+article img {
+    width: 30%;
+    max-width: 400px;
+    min-width: 250px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+article.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;    
+}
+
+section {
+    margin-top: 5%;
+    padding: 5%;
+} 
+
+section > ul {
+    text-align: right;
+    padding-top: 4%;
+}
+
+section > ul li {
+    line-height: 1.5em;
+}
+
+.date {
+    font-size: 1.2em;
+}
+
+.age, .genre, .rating {
+    font-size: .9em;
+}
+
+.bookCover {
+    border-left: 1px solid #EFC69B;
+    padding-top: 0%;
+}
+
+.bookCover > div {
+    display: grid;
+    justify-content: center;
+}
+
+form {
+    border: 1px solid #EFC69B;
+    padding: 3%; 
+    margin-top: 8%;
+}
+
+footer {
+    text-align: center;
+    padding: 3%;
+}
