@@ -2,8 +2,6 @@
 const menuButton = document.querySelector("#menuButton");
 const gallery = document.querySelector(".gallery");
 
-// let events = [];
-
 function toggleMenu() {
     const allListItems = document.querySelectorAll("li");
 
@@ -54,13 +52,18 @@ function viewHandler(event) {
         const firstPart = splitSource[0];      //take the first part (item) in the array
         const modifiedSrc = firstPart + "-full.jpeg";    //append the new ending to the first item
         console.log("Modified src:", modifiedSrc);
-        // insert the viewerTemplate into the top of the body element
+        // insert the viewerTemplate into the top of the body element. Call the function;
+        const insertHTML = viewerTemplate(modifiedSrc, "picture");
 	    // (element.insertAdjacentHTML("afterbegin", htmltoinsert));
-        figure.insertAdjacentHTML("", "modifiedSrc");
+        document.body.insertAdjacentHTML("afterbegin", insertHTML);
 	// add a listener to the close button (X) that calls a function called closeViewer when clicked
+        const closeButton = document.querySelector(".close-viewer");  //Get viewer button (X) and assign to a variable;
+        closeButton.addEventListener("click", closeViewer);    //Add listener to button click
 }
 
-// function closeViewer() {
+function closeViewer() {
+    closeBox = document.querySelector(".viewer"); //Get the item, ie. viewer
+    closeBox.remove();   //remove doesn't need anything inside it. Just put the item to close in front of it
 
-// }
+ }
 
