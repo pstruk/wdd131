@@ -31,6 +31,7 @@ h1 {
     font-family: Lora, Impact, serif;
     font-size: 2em;
     padding: 2%;
+    max-width: 85%;
 }
 
 h2 {
@@ -95,11 +96,14 @@ article img {
 main {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    max-width: 85%;
+    margin: 0 auto;
 }
 
 article.grid-container {
     display: grid;
-    grid-template-columns: 1fr 2fr;    
+    grid-template-columns: 1fr 2fr;
+        
 }
 
 section {
@@ -110,6 +114,11 @@ section {
 section > ul {
     text-align: right;
     padding-top: 4%;
+    border-right: 1px solid #EFC69B;
+    display: block;
+    padding-left: 0; 
+    height: 95%;
+    padding-right: 5%;
 }
 
 section > ul li {
@@ -125,8 +134,8 @@ section > ul li {
 }
 
 .bookCover {
-    border-left: 1px solid #EFC69B;
     padding-top: 0%;
+    padding-left: 0%;
 }
 
 .bookCover > img {
@@ -138,6 +147,8 @@ form {
     border: 1px solid #EFC69B;
     padding: 3%; 
     margin-top: 8%;
+    max-width: 85%;
+    margin-left: 10%;
 }
 
 footer {
