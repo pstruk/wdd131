@@ -1,0 +1,134 @@
+body {
+    font-size: 16px;
+    max-width: 600px;
+}
+
+#creditCardForm {
+    padding: 5%; 
+    max-width: 320px;
+    max-height: 230px;
+    display: grid;
+    grid-template-columns: 1.1fr 3.8fr 1.1fr;
+    /* grid-template-columns: 1fr 4fr 1fr; */
+    grid-template-rows: .5fr 3fr .5fr .5fr; 
+    gap: 10px;
+}
+
+#cardFront {
+    background-color: rgb(219, 218, 218);
+    border-radius: 3%;
+    grid-column: 1/3;
+    grid-row: 1/3;
+    z-index: 2;
+    display: grid;
+    box-shadow: 2px 2px #c7c6c6;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 2% 7% 5% 5%;      /* top, right, bottom, left */
+    font-size: .7em;
+    gap: 10px;
+}
+
+#cardBack {
+    background-color: rgb(219, 218, 218);
+    border-radius: 3%;
+    grid-column: 2/4;
+    grid-row: 2/4; 
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 2.8fr .8fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: end;
+    padding-bottom: 7%;      
+}
+
+#submitButton {
+    background-color: rgb(219, 218, 218);
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: .6em;
+    grid-column: 3;
+    grid-row: 4;
+    padding: 12%;
+    width: 100%; 
+}
+
+.card-image {
+    max-width: 55%;
+    align-self: center;
+    justify-self: end;
+}
+
+p {
+    align-self: center;
+    letter-spacing: .03em;
+}
+
+div > label {
+    letter-spacing: .03em;
+}
+
+#creditCardNumber::placeholder,
+#cardholderName::placeholder,
+#expirationMonth::placeholder,
+#expirationYear::placeholder,
+#cvc-cvvCode::placeholder {
+    font-size: .8em;
+} 
+
+#cardholder {
+    grid-column: 1/2;
+    grid-row: 3;
+}
+
+#cardholderName {
+    max-width: 90%;
+}
+
+#expiration {
+    grid-column: 2;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .7fr 1fr;
+    padding-left: 3%;
+}
+
+#expirationMonth {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+    max-width: 35%;
+}
+
+#expirationYear {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: end;
+    max-width: 35%;
+}
+
+#blackStripe {
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    grid-column: 1/3;
+    grid-row: 1;
+    align-self: center;
+}
+
+#cvc {
+    grid-column: 2;
+    grid-row: 3/4;
+    align-self: center;
+    padding-right: 4%;
+    font-size: .7em;
+}
+
+#cvc-cvvCode {
+    grid-column: 2;
+    grid-row: 4; 
+    width: 65%;
+} 
+
+

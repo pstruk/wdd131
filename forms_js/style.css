@@ -1,0 +1,129 @@
+/* style.css */
+
+
+/* This is known as a universal selector * It targets all elements on the page.
+   The box-sizing applies globally.
+*/
+
+ * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  main {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .errors > p {
+    border: 1px solid red;
+    padding: 0.5em;
+  }
+  
+  /* Style the select arrow for Safari */
+  select::-webkit-inner-spin-button,
+  select::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Style the select arrow for other browsers */
+  select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  
+  /* Initially hide the credit card input and label */
+  .hide {
+    display: none; 
+  }
+
+  /* My CSS code */
+  /* label {
+    display: block;
+    font-size: .75em;
+    font-weight: bold;
+    line-height: 2em;
+    padding-top: 1%;
+  }
+
+  button {
+    display: block;
+    background-color: rgb(90, 185, 90);
+    font-size: .5em;
+    padding: 1.5%;
+    width: 12%;
+    color: white;
+    border: none;
+    margin-top: 1%;
+    border-radius: 3px;
+  }
+
+  input, select {
+    width: 78%;
+    line-height: 1.5em;
+    border: 1px solid #ccc;
+  } 
+
+  textarea {
+    width: 78%;
+    line-height: 1em;
+    border: 1px solid #ccc;
+  }
+  
+  h1 {
+    padding-left: 6%;
+    font-size: 1.5em;
+    font-weight: bolder;
+    
+  }
+
+  input::placeholder {
+    font-size: .7em;
+    padding-left: 1%;
+  }
+  
+   select {
+    font-size: .6em;
+    padding-left: 1.5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+   }
+
+  body {
+    font-size: 16px;
+  } */
+
+
+  /* Bro. Thompson CSS */
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  /* Add a border to make it visually consistent*/
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+  }
+
+  /* cursor: pointer; creates a hand with a pointed finger */
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  } 
