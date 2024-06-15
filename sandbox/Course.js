@@ -1,5 +1,5 @@
 // modules.js encapsulated into a module called Course.js
-// import using: import aCourse from "./Course.js";
+// import this file using: import aCourse from "./Course.js";
 
 
 const aCourse = {
