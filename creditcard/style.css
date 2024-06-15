@@ -131,4 +131,10 @@ div > label {
     width: 65%;
 } 
 
-
+/* recommended TA fix for spanning credit card input over all columns */
+/* 
+#creditCardNumber {
+    grid-column: 1 / 3; 
+    flex-direction: column; 
+    display: flex; 
+} */
