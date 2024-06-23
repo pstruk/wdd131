@@ -23,8 +23,8 @@ const aCourse = {
     ],
     
     init() {
-        setCourseInfo(aCourse);
-        renderSections(aCourse.sections);
+        setCourseInfo(this);
+        renderSections(this.sections);
     },
     
     changeEnrollment: function (sectionNum, add = true) {
