@@ -8,7 +8,7 @@
     <meta name="author" content="Patricia Struk">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="recipes.css" />
-    <script src="main.js" defer></script>  <!-- add type = "module" and remove "defer" when using an ES modules -->
+    <script src="main.js" type="module"></script>  <!-- add type = "module" and remove "defer" when using an ES modules -->
     <meta property="og:title" content="Recipe Book">
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Assorted Dessert and Main Course Recipes">
@@ -29,11 +29,13 @@
                 <img src="images/search.svg" alt="Search Button Icon" id="magnifyIcon">
             </button>
         </form>
-        <section id="recipe">
+        <!-- <section class="recipe">
             <img src="images/apple-crisp.jpg" class="recipeImage" alt="photo of apple-crisp">
             <div class="recipeInfo">
-                <button>dessert</button>
-                <h2>Apple Crisp</h2>
+                <ul class="recipeTags">
+                    <li>dessert</li>
+                </ul>
+                <h2><a href="#">Apple Crisp</a></h2>
                 <span
                     class="rating"
                     role="img"
@@ -51,7 +53,7 @@
                     great served warm with vanilla ice cream. 
                 </p>
             </div>
-        </section>    
+        </section>     -->
     </main>
     <footer class="footer">
         <div class="social">
