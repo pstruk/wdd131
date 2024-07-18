@@ -1,0 +1,181 @@
+<!-- child page 1 for paws 'n' whiskers website -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>       
+        <meta charset="UTF-8">
+        <title>Pet Adoption</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="This is a final website project for the WDD131 course at BYU Idaho">
+        <meta name="author" content="Patricia Struk">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <link rel="stylesheet" href="styles/style.css" />
+        <script src="form.js" type="module"></script>  
+        <meta property="og:title" content="Paws 'n Whiskers">
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="A pet adoption website for animals">
+        <meta property="og:image" content="https://pstruk.github.io/wdd131/paws_n_whiskers/images/dog_cat_rabbit.jpg">  
+        <meta property="og:url" content="https://pstruk.github.io/wdd131/paws_n_whiskers/index.html">
+        <meta name="twitter:card" content="summary_large_image">
+    </head>
+    <body id="adoptionChildElement">
+        <header>
+            <h1>
+                <img src="images/pawLogo-green.png" alt="logo" class="pawlogo"> Paws 'n Whiskers
+            </h1>
+            <div class="skiptocontent">
+                <a href=".maincontent">skip to main content</a>
+            </div>
+            <nav class="navList">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="./index.html#petCare">Pet Care</a></li>
+                    <li><a href="#">Adoption</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="maincontent">   
+            <section class="considerations" class="hide">
+                <img src="images/dog_cat_rabbit.jpg" class="animalPromoImage" alt="photo of a dog, cat and rabbit">
+                <h2>Adoption Considerations</h2> 
+                <ol>
+                    <li>Pets are a lifetime commitment; most cats, dogs, and rabbits live 10-16 years. Are you ready? </li>
+                    <li>Does your household have children or elderly members that your pet needs to get along with?</li>
+                    <li>Are you ready to deal with pet hair on a daily basis? There will be shedding.</li> 
+                    <li>Is anyone in your household allergic to animals?</li> 
+                    <li>Are you ready for the financial commitment? Pets need food, grooming, and vet care. </li>
+                    <li>Who will carry the responsibility for your pet's care? Will they be home during the day?</li>
+                    <li>Do you have the equipment? All adopted cats/rabbits must be transported home in a secure carrier. Dogs must be leashed and collared.
+                </ol>
+            </section>   
+            <section id="fees" class="hide">
+                <h2>Adoption Fees:</h2>
+                <p>
+                    The adoption fee includes flea/worm treatments, up-to-date vaccinations, micro-chipping, and spaying/neutering. 
+                </p> 
+                <table id="feeTable">
+                    <tr>
+                        <th></th>
+                        <th>Under 6 Years</th>
+                        <th>6+ Years</th>
+                    </tr>
+                    <tr>
+                        <td>Dogs</td>
+                        <td>$450</td>
+                        <td>$150</td>    
+                    </tr>
+                    <tr>
+                        <td>Cats</td>
+                        <td>$200</td>
+                        <td>$75</td>
+                    </tr>
+                    <tr>
+                        <td>Rabbits</td>
+                        <td>$100</td>
+                        <td>$35</td>
+                    </tr> 
+                </table>
+            </section>
+            <div class="adoption" id="insertMessage">
+                <h2 id="fieldsetHeading">Adoption Application:</h2>
+                <form id="adoptform">
+                    <fieldset class="applicant">
+                        <legend>Applicant</legend>
+                        <section class="personalDetails">
+                            <div class="item">
+                                <label for="firstName">First Name<span>*</span></label>
+                                <input id="firstName" type="text" name="firstName" value="" required />
+                            </div>
+                            <div class="item">
+                                <label for="lastName">Last Name<span>*</span></label>
+                                <input id="lastName" type="text" name="lastName" value="" required />
+                            </div>
+                            <div class="item">
+                                <label for="emailAddress">Email Address<span>*</span></label>
+                                <input id="emailAddress" type="text" name="emailAddress" required/>
+                            </div>
+                            <div class="item">
+                                <label for="phoneNumber">Phone<span>*</span></label>
+                                <input id="phoneNumber" type="tel" name="phoneNumber" required/>
+                            </div>
+                            <div class="item">
+                                <label for="streetAddress">Address<span>*</span></label>
+                                <input id="streetAddress" type="text" name="streetAddress" required/>
+                            </div>
+                            <div class="item">
+                                <label for="cityName">City<span>*</span></label>
+                                <input id="cityName" type="text" name="city" required/>
+                            </div>
+                            <div class="item">
+                                <label for="stateName">State<span>*</span></label>
+                                <input id="stateName" type="text" name="state" required/>
+                            </div>
+                            <div class="item">
+                                <label for="zipCode">Zip<span>*</span></label>
+                                <input id="zipCode" type="text" name="zipCode" required/>
+                            </div>
+                        </section>  
+                    </fieldset> 
+                    <fieldset class="questionnaire">
+                        <legend>Questionnaire</legend>
+                        <section class="question_answer">    
+                            <div class="question">
+                                <label for="occupation">What is your occupation?<span>*</span></label>
+                                <input id="occupation" type="text" name="occupation" />    
+                            </div>
+                            <div class="question">
+                                <label for="numberOfKids">How many children are in your household?<span>*</span></label>
+                                <input id="numberOfKids" type="text" name="kids" value="3" required/>    
+                            </div>
+                            <div class="question">
+                                <label for="numberOfAdults">How many adults are in your household?<span>*</span></label>
+                                <input id="numberOfAdults" type="text" name="adults" value="2" required/>    
+                            </div>
+                            <div class="question" id="petsYesNo">
+                                <label for="yesOrNo">Do you currently have any pets living in your household?<span>*</span></label> 
+                                <select id="yesOrNo" required>
+                                    <option selected value="" disabled selected>Select One</option>
+                                    <option value="1">Yes</option>
+                                    <option value="2">No</option>
+                                </select>
+                            </div>
+                            <div class="question" id="insertQuestion">
+                                <label for="houseOrApartment">Do you live in a house or an apartment?<span>*</span></label> 
+                                <select id="houseOrApartment" required>
+                                    <option selected value="" disabled selected>Select One</option>
+                                    <option value="1">House</option>
+                                    <option value="2">Apartment</option>
+                                </select>
+                            </div>
+                            <div class="question" id="petChoiceQuestion">
+                                <label for="petChoice">What type of pet do you wish to adopt?<span>*</span></label> 
+                                <select id="petChoice" required>
+                                    <option selected value="" disabled selected>Select One</option>
+                                    <option value="1">Dog</option>
+                                    <option value="2">Cat</option>
+                                    <option value="3">Rabbit</option>
+                                </select>
+                            </div>
+                        </section>    
+                    </fieldset>
+                    <div class="submissionButton">
+                        <button type="submit" id="submitButton">Submit</button>
+                    </div>
+                </form>
+                <section id="confirmation">
+
+                </section>
+            </div>    
+        </main>
+        <footer class="footer">
+            <p>©2024</p>
+            <div class="socialIcons">
+                <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+                <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon" class="social"></a>
+                <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon" class="social"></a>
+                <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"class="social" ></a>
+            </div>
+        </footer>
+    
+    </body>    
+</html>
+

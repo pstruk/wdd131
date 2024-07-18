@@ -1,10 +1,10 @@
-const animals = [
+export const animals = [
 	{
 		name: 'Axel',
-		category: 'dogs',
+		category: 'Dogs',
 		breed: 'Labrador Retriever',
 		sex: 'Male',
-        weight: '15 pounds',
+        weight: '50 pounds',
 		age: '2 years',
 		personality: ['Smart', 'Energetic', 'Runs'],
 		color: 'Black',
@@ -13,7 +13,7 @@ const animals = [
 	},
 	{
 		name: 'Cooper',
-		category: 'cats',
+		category: 'Cats',
 		breed: 'Domestic Short Hair',
 		sex: 'Male',
         weight: '2.6 pounds',
@@ -25,7 +25,7 @@ const animals = [
 	},
 	{
 		name: 'Jericho',
-		category: 'dogs',
+		category: 'Dogs',
 		breed: 'Rottweiler',
 		sex: 'Male',
         weight: '18 pounds',
@@ -37,7 +37,7 @@ const animals = [
 	},
 	{
 		name: 'Kylo',
-		category: 'cats',
+		category: 'Cats',
 		breed: 'Domestic Short Hair',
 		sex: 'Male',
         weight: '3 pounds',
@@ -49,33 +49,33 @@ const animals = [
 	},
 	{
 		name: 'Mustard',
-		category: 'rabbits',
+		category: 'Rabbits',
 		breed: 'Dwarf',
 		sex: 'Male',
         weight: '1 pound',
 		age: '3 years',
-		personality: ['Playful', 'Loves to Exercise'],
+		personality: ['Playful', 'Loves Exercise'],
 		color: 'White',
 		image: './images/mustard_rabbit.jpg',
 		id: '231345'
 	},
 	{
 		name: 'Sapporo',
-		category: 'rabbits',
+		category: 'Rabbits',
 		breed: 'Holland Lop',
 		sex: 'Female',
         weight: '1.3 pounds',
 		age: '1 year',
 		personality: ['Friendly', 'Funny', 'Playful'],
 		color: 'Brown',
-		image: './images/sapporo_rabbit.jpg',
+		image: './images/sapporo_rabbit.jpeg',
 		id: '247877'
 	},
 	{
 		name: 'Tiny',
-		category: 'cats',
+		category: 'Cats',
 		breed: 'Domestic Short Hair',
-		sex: 'Male',
+		sex: 'Female',
         weight: '2.9 pounds',
 		age: '10 months',
 		personality: ['Sweet', 'Friendly', 'Cuddly'],
@@ -85,7 +85,7 @@ const animals = [
 	},
     {
         name: 'Toffee',
-		category: 'rabbits',
+		category: 'Rabbits',
 		breed: 'French Lop',
 		sex: 'Male',
         weight: '1 pound',
@@ -97,7 +97,7 @@ const animals = [
     },
 	{
 		name: 'Wesley',
-		category: 'dogs',
+		category: 'Dogs',
 		breed: 'Great Pyrenees',
 		sex: 'Male',
         weight: '15.6 pounds',
@@ -109,4 +109,32 @@ const animals = [
 	}
 ]
 
-export default animals
+export function getRandomNumber(maxValue) {
+    const randomNumber = Math.floor(Math.random() * maxValue);
+    return randomNumber;
+}
+
+export function getPageName(event) {
+    const pageName = event.target.location.pathname;
+    return pageName;
+}
+
+export function submissionTemplate(submissionDetails) {
+    // An easy way to hide an element with only Javascript is: element.style.display 
+    // OR you could create a class in your CSS like: .hide { display: none; }
+    // and then in the Javascript do something like element.classlist.add('hide')
+	document.querySelector("#considerations").style.display = "none";
+	document.querySelector("#fees").style.display = "none;"
+    
+    const successMessage = `<div id="responseMessage">
+		<p>${submissionDetails.name},<br> Thank you for submitting a Pet Adoption Application!</p>
+		<p>Your application has now been received by our office. We will contact you 
+      	at ${submissionDetails.email} within 72 hours to set up your adoption appointment, where  
+      	your ${submissionDetails.totalHouseMembers} household members will meet their new ${submissionDetails.pet}.
+		</p>
+		</div>`
+	console.log(successMessage);		
+    //document.querySelector("#adoptionChildElement").innerHTML.insertAdjacent() = successMessage;
+    document.querySelector("#insertMessage").innerHTML = successMessage;
+}
+  

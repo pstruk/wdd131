@@ -1,0 +1,464 @@
+/* stylesheet for paws n whiskers homepage and childpage */
+@import url('https://fonts.googleapis.com/css2?family=Fauna+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #3F7D20;
+    --secondary-color: #0D0A0B;
+    --accent1-color: #72B01D;
+    --accent2-color: #FFFFFF;
+      
+    /* change the values below to your chosen font(s) */
+    --heading-font: "Fauna One", Georgia, "Times New Roman", serif;
+    --paragraph-font: "Poppins", Arial, Helvetica, sans-serif;
+  
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: var(
+      --primary-color
+    ); /* headlines on a white background */
+    --headline-color-on-color: var(--accent2-color); /* headlines on a colored background */
+    --paragraph-color-on-white: var(
+      --secondary-color
+    ); /* paragraph text on a white background */
+    --paragraph-color-on-color: var(--accent2-color); /* paragraph text on a colored background */
+    --paragraph-background-color: var(--primary-color);
+    --nav-link-color: var(--secondary-color);
+    --nav-background-color: var(--accent1-color);
+    --nav-hover-link-color: var(--accent2-color);
+    --nav-hover-background-color: var(--secondary-color);
+  }
+
+/* accessibility */
+
+.skiptocontent a {
+    position: absolute;
+    top: -47px;
+    padding: .5%;
+    background-color: #AF1B3F ;
+    outline: 2px solid black;
+    color: white;
+}
+
+.skiptocontent a:focus {
+    position: static;
+}
+
+/* homepage and child page */
+
+body {
+    font-size: 16px;
+    font-family: var(--paragraph-font);
+}
+
+.pawlogo {
+    width: 55px;
+}
+
+h1 {
+    font-size: 2.7em;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+h2 { 
+    font-size: 1.2em;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+}
+
+#fieldsetHeading {
+    font-size: 1.55em;
+}
+
+.navList {
+    background-color: var(--nav-background-color);
+    line-height: 2em;
+    font-size: 1.5em;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+nav > ul > li {
+    list-style-type: none;
+    font-weight: bold;
+    
+}
+
+nav a:link,
+nav a:visited {
+    padding: 10px;
+    color: var(--nav-link-color); 
+}
+
+nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+}  
+
+li > a {
+    text-decoration: none;
+}
+
+#searchForm > button > img {
+    width: 30px;
+}
+
+#searchForm > input:placeholder-shown {
+    font-size: 1.3em;
+    padding-left: 1%;
+}
+
+#searchInput {
+    width: 85%;
+    height: 40px;
+    border: 2px solid var(--secondary-color);
+    padding-left: 1%;
+    box-sizing: border-box;
+}
+
+#searchButton {
+    background-color: white;
+    border-top-right-radius: 5px; 
+    border-bottom-right-radius: 5px;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+} 
+
+#errorMessage {
+    color: red;
+    font-size: 1.3em;
+    padding-left: 1%;
+    padding-bottom: 1%;
+}
+
+#magnifyIcon {
+    align-self: center;
+}
+
+#searchForm {
+    display: flex;
+    flex-direction: row;
+}
+
+.adoptionAnimal,
+#petCare,
+.considerations,
+#fees,
+.adoption {
+    display: grid;
+    grid-column: 1fr;
+    border: 5px solid var(--primary-color);
+    border-radius: 20px;
+    margin-top: 3%;
+    padding: 3% 3% 0 3%;   
+}
+
+.animalImage {
+    max-width: 100%;
+    border: 5px solid var(--accent1-color);
+    place-self: center;
+}
+
+.animalInfo {
+    margin-bottom: 0;
+}
+
+.animalFacts > li {
+    list-style-type: none;
+    font-size: 1.3em;
+}
+
+.bold_text {
+    font-weight: bold;
+}
+
+#petName,
+#petCategory,
+#petBreed, 
+#petSex,
+#petWeight,
+#petAge,
+#petPersonality, 
+#petColor,
+#petId {
+    padding-left: 1%;
+}
+
+#petCare {
+    background-color: var(--paragraph-background-color);
+    color: var(--paragraph-color-on-color);
+    font-size: 1.3em;
+    padding-left: 4%;
+    margin-bottom: 2%;
+} 
+
+#petCare > h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+    color: var(--headline-color-on-color);
+}
+
+.footer  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    padding-top: 1.5%; 
+    font-size: 1em;
+    background-color: var(--accent1-color);
+}
+
+.footer > div {
+    display: flex;
+    flex-direction: row;
+    padding-right: 2%;
+}
+
+.social {
+    width: 55px;
+    margin-left: 10px;
+} 
+
+.footer > p {
+    padding-left: 2%;
+}
+
+/* child page-adoption */
+
+.adoption {
+    margin-bottom: 3%;
+}
+
+.animalPromoImage {
+    max-width: 100%;
+    place-self: center;
+    margin-bottom: 3%;
+    width: 80%;
+}
+
+#responseMessage {
+    font-size: 1.8em;
+    font-weight: bold;
+    padding-bottom: 1%;
+}
+
+.considerations,
+#fees,
+.applicant,
+.questionnaire {
+    font-size: 1.3em;
+}
+
+.considerations > h2,
+#fees > h2,
+.adoption > h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 1.5%;
+}
+
+.applicant,
+.questionnaire,
+#fees > p {
+    padding-left: 1%;
+}
+
+#fees > p {
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    font-size: .9em;
+}
+
+#feeTable {
+    margin-bottom: 4%;
+    margin-left: 1%;
+}
+
+#feeTable tr td:nth-child(1) {
+    font-weight: bold;
+}
+
+/* centers 2nd and 3rd column content under their headings */
+#feeTable tr td:nth-child(2),
+#feeTable tr td:nth-child(3) {
+    text-align: center;
+}
+
+/* fee table borders: */
+/* To combine adjacent borders  */
+#feeTable {
+    border-collapse: collapse; 
+}
+/* To add a bottom border to each row */
+tr {
+    border-bottom: 1px solid var(--secondary-color); 
+} 
+
+fieldset {
+    margin-top: 2%;
+}
+
+label > span{
+    color: red;
+}
+
+label, input {
+    display: block;
+    font-size: 1em;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+}
+
+.item,
+.question {
+    margin-bottom: 2%;
+}
+
+select {
+    font-size: .9em;
+}
+
+#submitButton {
+    font-size: 1.5em;
+    height: 55px; 
+    width: 99%;
+    margin-left: .5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border: 3px solid var(--secondary-color); 
+}
+
+#submitButton:hover {
+    background-color: orange;
+}
+
+
+
+/* FIXME: ADJUST THIS For summary that's returned */ 
+#confirmation {
+    font-size: 1.2em;
+}
+
+
+
+
+/* Media Queries - medium */
+
+@media screen and (min-width: 600px) {
+    body {
+        font-size: 1.2em;
+    }
+    
+    .pawlogo {
+        width: 65px;
+    }
+    
+    h1 {
+        font-size: 2.8em;
+    }
+    
+    #searchInput {
+        height: 50px;
+    }
+
+    #searchForm > button > img {
+        width: 40px;
+    }
+
+    .animalFacts {
+        padding-left: 15%;
+    }
+
+    .social {
+        width: 60px;
+    }
+}
+
+
+/* Media Queries - large */
+
+@media screen and (min-width: 960px) {
+    body {
+        font-size: 1.3em;
+    }
+    
+    .pawlogo {
+        width: 85px;
+    }
+
+    h1 {
+        font-size: 2.9em;
+    }
+ 
+    #searchInput {
+        width: 70%;
+        margin-left: 10%;
+        height: 60px;
+    }
+    
+    #searchButton {
+       width: 10%;
+    } 
+    
+    .adoptionAnimal,
+    #petCare,
+    .considerations,
+    #fees,
+    .adoption {
+        margin-left: 10%;
+        margin-right: 10%;   
+    }
+
+    .adoptionAnimal {
+        grid-template-columns: 1fr 1fr;
+        padding-top: 0;
+    }
+
+    .animalImage {
+        grid-column: 1;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .animalFacts {
+        grid-column: 2;
+        padding-top: 2%;
+        padding-left: 3%;
+    }
+
+    input {
+        height: 40px;
+    }
+
+    .footer {
+        font-size: 1.1em;
+    }
+
+    .social {
+        width: 70px;
+    }
+}
+
+
+
+
+
+
+
+

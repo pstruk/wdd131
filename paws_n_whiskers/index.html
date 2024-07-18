@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Paws 'n Whiskers</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="This is a final website project for the WDD131 course at BYU Idaho">
+        <meta name="author" content="Patricia Struk">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <link rel="stylesheet" href="styles/style.css" />
+        <script src="main.js" type="module"></script>  
+        <meta property="og:title" content="Paws 'n Whiskers">
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="A pet adoption website for animals">
+        <meta property="og:image" content="https://pstruk.github.io/wdd131/paws_n_whiskers/images/axel_dog.jpg">
+        <meta property="og:url" content="https://pstruk.github.io/wdd131/paws_n_whiskers/index.html">
+        <meta name="twitter:card" content="summary_large_image">
+    </head>
+    <body id="parentElement">
+        <header>
+            <h1>
+                <img src="images/pawLogo-green.png" alt="logo" class="pawlogo"> Paws 'n Whiskers
+            </h1>
+            <div class="skiptocontent">
+                <a href=".maincontent">skip to main content</a>
+            </div>
+            <nav class="navList">
+                <ul>
+                    <!-- <li><a href="#">Home</a></li> -->
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#petCare">Pet Care</a></li>
+                    <li><a href="./form.html">Adoption</a></li>
+                </ul>
+            </nav>
+        </header>
+        <form id="searchForm">
+            <input type="search" id="searchInput" placeholder="Search by animal category, sex, or personality">
+            <button type="submit" id="searchButton" alt="SearchButton">
+                <img src="images/search.svg" alt="Search Button Icon" id="magnifyIcon">
+            </button>
+        </form>
+        <main class="maincontent">
+            <!-- <section class="adoptionAnimal">
+                <img src="images/axel_dog.jpg" class="animalImage" alt="photo of a Labrador Retriever">
+                <div class="animalInfo">
+                    <ul class="animalFacts">
+                        <li><span class="bold_text">Name: </span><span id="petName">Axel</span></li>
+                        <li><span class="bold_text">Category: </span><span id="petCategory">Dogs</span></li>
+                        <li><span class="bold_text">Breed: </span><span id="petBreed">Labrador Retriever</span></li>
+                        <li><span class="bold_text">Sex: </span><span id="petSex">Male</span></li>
+                        <li><span class="bold_text">Weight: </span><span id="petWeight">50 pounds</span></li>
+                        <li><span class="bold_text">Age: </span><span id="petAge">2 years</span></li>
+                        <li><span class="bold_text">Personality: </span><span id="petPersonality">Smart, Energetic, Runs</span></li>
+                        <li><span class="bold_text">Color: </span><span id="petColor">Black</span></li>
+                        <li><span class="bold_text">ID: </span><span id="petId">248366</span></li>
+		            </ul>
+                </div>
+            </section>    -->
+            <article id="petCare">
+                <h2 >Pet Care Tips</h2>
+            
+                <p> Summer has arrived, but there are a few things that you should consider, if you're heading to 
+                    the lake with your dog. Some dogs are natural-born swimmers, but others may not like water at all. 
+                    If you want everyone to have a great experience, there are some things that you can do to help your 
+                    dog. If in doubt about your pet's ability near water, then we recommend getting them a dog life-jacket. 
+				    <br><br>
+				    Introduce them slowly into small bodies of water, perhaps a kiddie pool with a few toys. 
+				    Don't forget to keep some treats on hand as a reward. Keep them leashed to maintain their 
+				    safety and allow them to enter the water slowly, at their own pace. If they're hesitant, take 
+				    a few steps into the water yourself to show them that it's not so scary. Never toss, push, 
+				    or pull your dog into the water, as it is dangerous and likely to increase their fear. A little 
+				    patience goes a long way and before you know it, they'll be begging YOU to go to the beach!
+                </p>
+            </article>    
+        </main>
+        <footer class="footer">
+            <p>©2024</p> 
+            <div class="socialIcons">
+                <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+                <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon" class="social"></a>
+                <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon" class="social"></a>
+                <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon" class="social"></a>
+            </div>
+        </footer>
+    </body>
+</html>
+
