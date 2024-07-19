@@ -1,12 +1,9 @@
-// import from the ES6 module paws.mjs
+// import from the ES module paws.mjs
 import * as paws from './paws.mjs';
 
-// A for loop test to see if the getRandomIndexNum displays numbers for all animals located in the paws module
-// for (let i=0; i<30; i++) {
-//     console.log(getRandomIndex(paws.animals));
-// }
+// Functions to insert dynamic home page content
 
-// To Insert the Home page dynamic elements---------------------------------------------------------
+// To get the index position for a random generated animal
 function getRandomIndexNum(animalArray) {
     const randomIndexNum = paws.getRandomNumber(animalArray.length);
     return randomIndexNum;
@@ -31,7 +28,7 @@ function animalInfoTemplate(animal) {
             </section>`;
 }
 
-// create the personality string for animalInfoTemplate()
+// Personality string for animalInfoTemplate()
 function getPetPersonality(animal) {
     let personalityString = "";
 
@@ -41,15 +38,12 @@ function getPetPersonality(animal) {
     return personalityString;
 };
 
+// To transform animal objects into html elements and insert them into  
+// the home page, just before the Pet Care section
 function renderAnimalInfo(animalList) {
-    // reference the element that comes after where we want to insert the animals
     const petHtmlElement = document.querySelector("#petCare");
-
-    // Initialize animalHtml, use the animalInfoTemplate function to 
-    // transform our animal objects into animalHtml strings    
     let animalHtml = ``;
 
-    // Insert the animal template into the home page
     animalList.map((animal) => {
         animalHtml += animalInfoTemplate(animal);
     })
@@ -71,7 +65,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     initHome();
 })
 
-// For Search Feature on Home Page-----------------------------------------------------------
+// Search functions for the Home Page
+
 function searchInputToLower() {
     // Get user input and convert it to lowercase. 
     const lowercaseInput = document.querySelector("#searchInput").value.toLowerCase();
@@ -81,23 +76,20 @@ function searchInputToLower() {
     }
 }
 
-// Check the search term against the "animals" list using the category: dog(s), cat(s), rabbit(s), 
-// the sex(male or female), or a personality trait   
+// Check the search term against the "animals" list using: animal category, sex, or 
+// personality trait   
 function filterAnimals(query) {
-    console.log(paws.animals);
     let filteredAnimals = paws.animals.filter(animal => {
         const categoryMatch = animal.category.toLowerCase().includes(query);
-        // const sexMatch = animal.sex.toLowerCase().includes(query); 
         const sexMatch = animal.sex.toLowerCase().match(new RegExp(`^${query}$`));
-
         const personalityMatch = animal.personality.find((item) => item.toLowerCase().includes(query));
 
         return categoryMatch || sexMatch || personalityMatch;
     })
 
-    // Sort the animals returned alphabetically by name. 
+    // Sort animal list alphabetically by name and render the filtered list to page 
     const sortedAnimalList = filteredAnimals.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
-    // Render the filtered list of animals to the page. 
+
     removePreviousAnimals();
 
     if (sortedAnimalList.length > 0) {

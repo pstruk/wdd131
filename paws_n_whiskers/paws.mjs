@@ -1,3 +1,4 @@
+// This is the ES module used by index.html and form.html
 export const animals = [
 	{
 		name: 'Axel',
@@ -120,11 +121,8 @@ export function getPageName(event) {
 }
 
 export function submissionTemplate(submissionDetails) {
-    // An easy way to hide an element with only Javascript is: element.style.display 
-    // OR you could create a class in your CSS like: .hide { display: none; }
-    // and then in the Javascript do something like element.classlist.add('hide')
-	document.querySelector("#considerations").style.display = "none";
-	document.querySelector("#fees").style.display = "none;"
+    document.querySelector(".considerations").style.display = "none";
+	document.querySelector("#fees").style.display = "none";
     
     const successMessage = `<div id="responseMessage">
 		<p>${submissionDetails.name},<br> Thank you for submitting a Pet Adoption Application!</p>
@@ -133,8 +131,7 @@ export function submissionTemplate(submissionDetails) {
       	your ${submissionDetails.totalHouseMembers} household members will meet their new ${submissionDetails.pet}.
 		</p>
 		</div>`
-	console.log(successMessage);		
-    //document.querySelector("#adoptionChildElement").innerHTML.insertAdjacent() = successMessage;
+	  
     document.querySelector("#insertMessage").innerHTML = successMessage;
 }
   

@@ -3,17 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
-    /* change the values below to your colors from your palette */
+    /* Color values for selected palette */
     --primary-color: #3F7D20;
     --secondary-color: #0D0A0B;
     --accent1-color: #72B01D;
     --accent2-color: #FFFFFF;
       
-    /* change the values below to your chosen font(s) */
+    /* Fonts */
     --heading-font: "Fauna One", Georgia, "Times New Roman", serif;
     --paragraph-font: "Poppins", Arial, Helvetica, sans-serif;
   
-    /* these colors below should be chosen from among your palette colors above */
+    /* Assigned item colors */
     --headline-color-on-white: var(
       --primary-color
     ); /* headlines on a white background */
@@ -33,7 +33,7 @@
 
 .skiptocontent a {
     position: absolute;
-    top: -47px;
+    top: -60px;
     padding: .5%;
     background-color: #AF1B3F ;
     outline: 2px solid black;
@@ -66,13 +66,20 @@ h2 {
     font-size: 1.2em;
 }
 
-h1, h2, h3 {
+h1, h2 {
     font-family: var(--heading-font);
     color: var(--secondary-color);
 }
 
 #fieldsetHeading {
     font-size: 1.55em;
+}
+
+#introductionHeading {
+    text-align: center;
+    font-size: 1.4em;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 .navList {
@@ -110,6 +117,11 @@ li > a {
     text-decoration: none;
 }
 
+#searchForm {
+    display: flex;
+    flex-direction: row;
+}
+
 #searchForm > button > img {
     width: 30px;
 }
@@ -145,11 +157,6 @@ li > a {
 
 #magnifyIcon {
     align-self: center;
-}
-
-#searchForm {
-    display: flex;
-    flex-direction: row;
 }
 
 .adoptionAnimal,
@@ -236,7 +243,7 @@ li > a {
     padding-left: 2%;
 }
 
-/* child page-adoption */
+/* child page-Adoption */
 
 .adoption {
     margin-bottom: 3%;
@@ -250,7 +257,7 @@ li > a {
 }
 
 #responseMessage {
-    font-size: 1.8em;
+    font-size: 1.6em;
     font-weight: bold;
     padding-bottom: 1%;
 }
@@ -348,16 +355,6 @@ select {
     background-color: orange;
 }
 
-
-
-/* FIXME: ADJUST THIS For summary that's returned */ 
-#confirmation {
-    font-size: 1.2em;
-}
-
-
-
-
 /* Media Queries - medium */
 
 @media screen and (min-width: 600px) {
@@ -405,7 +402,11 @@ select {
     h1 {
         font-size: 2.9em;
     }
- 
+    
+    #introductionHeading {
+        padding-top: 1%;
+    }
+
     #searchInput {
         width: 70%;
         margin-left: 10%;
